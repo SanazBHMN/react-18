@@ -10,7 +10,7 @@ const App = () => {
     <>
       <Navbar title="Getting Started with State" />
       {/* <Counter /> */}
-      <Counter />
+      <Counter startAt={0} countBy={1} />
 
       {/* <div className="container">
         <List title="Guitars" items={guitars} background="danger" />
