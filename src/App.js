@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import List from "./List";
-import Counter from "./Counter";
+// import Counter from "./Counter";
+import Counter from "./CounterClass";
 
 const App = () => {
   const guitars = ["Strat", "Les Paul", "Explorer"];
@@ -8,6 +9,7 @@ const App = () => {
   return (
     <>
       <Navbar title="Getting Started with State" />
+      {/* <Counter /> */}
       <Counter />
 
       {/* <div className="container">
