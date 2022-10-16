@@ -2,9 +2,11 @@ import ListItem from "./ListItem";
 import PropTypes from "prop-types";
 
 const List = (props) => {
+  let css = `bg-${props.background}`;
+
   return (
     <>
-      <h3>{props.title}</h3>
+      <h3 className={css}>{props.title}</h3>
       <ul>
         {props.items.map((item) => (
           <ListItem key={item.index} text={item} />
