@@ -6,7 +6,7 @@ const App = () => {
   const showEmployees = true;
 
   return (
-    <div>
+    <div className="App bg-red-300">
       {showEmployees ? (
         <>
           <input
