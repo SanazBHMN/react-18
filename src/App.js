@@ -67,7 +67,7 @@ const App = () => {
       id: uuidv4(),
       name: name,
       role: role,
-      img: img,
+      image: img,
     };
     setEmployees([...employees, newEmployee]);
   }
