@@ -2,6 +2,7 @@ import { useState } from "react";
 import Employee from "./components/Employee";
 import { v4 as uuidv4 } from "uuid";
 import AddEmployee from "./components/AddEmployee";
+import EditEmployee from "./components/EditEmployee";
 
 const App = () => {
   const [role, setRole] = useState("dev");
@@ -84,16 +85,27 @@ const App = () => {
             }}
           />
           <div className="flex flex-wrap justify-center">
-            {employees.map((employee) => (
-              <Employee
-                key={uuidv4()}
-                id={employee.id}
-                name={employee.name}
-                role={employee.role}
-                image={employee.image}
-                updateEmployee={updateEmployee}
-              />
-            ))}
+            {employees.map((employee) => {
+              const editEmployee = (
+                <EditEmployee
+                  id={employee.id}
+                  name={employee.name}
+                  role={employee.role}
+                  updateEmployee={updateEmployee}
+                />
+              );
+
+              return (
+                <Employee
+                  key={uuidv4()}
+                  id={employee.id}
+                  name={employee.name}
+                  role={employee.role}
+                  image={employee.image}
+                  editEmployee={editEmployee}
+                />
+              );
+            })}
           </div>
           <AddEmployee newEmployee={NewEmployee} />
         </>
