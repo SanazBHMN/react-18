@@ -11,7 +11,7 @@ const App = () => {
       <Header>
         <Routes>
           <Route path="/employees" element={<Employees />} />
-          <Route path="/definition/:search" element={<Definition />} />
+          <Route path="/dictionary/:search" element={<Definition />} />
           <Route path="/dictionary" element={<Dictionary />} />
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />

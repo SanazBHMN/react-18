@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import DefinitionSearch from "../components/DefinitionSearch";
 import NotFound from "../components/NotFound";
 
 function Definition() {
@@ -46,6 +47,8 @@ function Definition() {
           })}
         </>
       ) : null}
+      <p>Search again:</p>
+      <DefinitionSearch />
     </>
   );
 }
