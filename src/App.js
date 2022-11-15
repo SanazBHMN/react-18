@@ -4,6 +4,7 @@ import NotFound from "./components/NotFound";
 import Employees from "./pages/Employees";
 import Dictionary from "./pages/Dictionary";
 import Definition from "./pages/Definition";
+import Customers from "./pages/Customers";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Header>
         <Routes>
           <Route path="/employees" element={<Employees />} />
+          <Route path="/customers" element={<Customers />} />
           <Route path="/dictionary/:search" element={<Definition />} />
           <Route path="/dictionary" element={<Dictionary />} />
           <Route path="/404" element={<NotFound />} />
